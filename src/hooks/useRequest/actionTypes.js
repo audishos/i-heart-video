@@ -1,4 +1,4 @@
-const prefix = 'useApiRequest/';
+const prefix = 'useRequest/';
 
 export const FETCHING = `${prefix}FETCHING`;
 export const SUCCESS = `${prefix}SUCCESS`;

@@ -1,12 +1,12 @@
 import React from 'react';
-import MoviesListContainer from './components/MoviesListContainer';
+import MovieListContainer from './components/MovieListContainer';
 
 function App() {
-  return (
-    <div className="App">
-      <MoviesListContainer />
-    </div>
-  );
+    return (
+        <div className="App">
+            <MovieListContainer />
+        </div>
+    );
 }
 
 export default App;

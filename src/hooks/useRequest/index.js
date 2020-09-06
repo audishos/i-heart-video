@@ -4,23 +4,23 @@ import reducer, { initialState } from './reducer';
 import { fetching, success, error } from './actionCreators';
 
 const useRequest = (
-  path,
-  { verb = 'get', params = {}, requestInstance = request } = {}
+    path,
+    { verb = 'get', params = {}, requestInstance = request } = {},
 ) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
-  const fetch = useCallback(async () => {
-    dispatch(fetching());
+    const fetch = useCallback(async () => {
+        dispatch(fetching());
 
-    try {
-      const response = await requestInstance[verb](path, { params });
-      dispatch(success(response));
-    } catch (e) {
-      dispatch(error(e));
-    }
-  }, [path, verb, params, requestInstance]);
+        try {
+            const response = await requestInstance[verb](path, { params });
+            dispatch(success(response));
+        } catch (e) {
+            dispatch(error(e));
+        }
+    }, [path, verb, params, requestInstance]);
 
-  return [state, fetch];
+    return [state, fetch];
 };
 
 export default useRequest;
