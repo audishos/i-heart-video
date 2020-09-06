@@ -8,6 +8,7 @@ import { IMAGES_URL } from '../constants/theMovieDb';
 const MovieListContainer = () => {
     const [page, setPage] = useState(1);
     const [state, fetch] = usePopularMovies(page);
+    const [favorites, handleToggleFavorite] = useFavorites();
 
     useEffect(() => {
         fetch();
@@ -21,7 +22,10 @@ const MovieListContainer = () => {
                     <Movie
                         key={movie.id}
                         title={movie.title}
+                        id={movie.id}
                         imgSrc={`${IMAGES_URL}${movie.poster_path}`}
+                        isFavorite={favorites.includes(movie.id)}
+                        onToggleFavorite={handleToggleFavorite}
                     />
                 ))}
             </MovieList>
@@ -30,3 +34,14 @@ const MovieListContainer = () => {
 };
 
 export default MovieListContainer;
+
+function useFavorites() {
+    const [favorites, setFavorites] = useState([]);
+
+    const handleToggleFavorite = (id, isFavorite) =>
+        isFavorite
+            ? setFavorites(favorites.filter(x => x !== id))
+            : setFavorites(favorites.concat(id));
+
+    return [favorites, handleToggleFavorite];
+}
