@@ -1,0 +1,17 @@
+.movie-banner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    background-color: gray;
+    opacity: 0.8;
+    padding: 1rem;
+}
+
+.movie-banner__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+}

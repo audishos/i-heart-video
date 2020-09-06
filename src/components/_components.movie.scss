@@ -1,4 +1,12 @@
+.movie {
+    width: 300px;
+    display: grid;
+    margin: 0.4rem;
+}
+
 .movie__poster {
     width: 300px;
     height: auto;
+    grid-row: 1;
+    grid-column: 1;
 }
