@@ -1,3 +1,51 @@
+# I Heart Video
+
+This app retrieves popular movies from themoviedb.org and allows users to add them to their favorites.
+
+## Getting Started
+
+1. clone this repo
+
+```
+$ git clone git@github.com:audishos/i-heart-video.git
+```
+
+or
+
+```
+$ git clone https://github.com/audishos/i-heart-video.git
+```
+
+2. cd into the directory
+
+```
+$ cd i-heart-video
+```
+
+3. install the dependencies
+
+```
+$ yarn install
+```
+
+4. create a local dotenv file
+
+```
+$ touch .env.local
+```
+
+5. enter your "themoviedb.org" api key into `.env.local`
+
+```
+REACT_APP_TMDB_API_KEY=<your-api-key>
+```
+
+## Special Notes
+
+-   In the interest of time, only tests for the `<MovieListContainer />` component and the `useFavorites` hook were added. In a more ideal scenario, tests would be added for each custom component and hook.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
