@@ -57,6 +57,11 @@ const usePopularMovies = () => {
                 setGetMoreComponent(<RequestError onClick={fetch} />);
                 break;
             }
+
+            default: {
+                setGetMoreComponent(<GetMoreButton onClick={fetch} />);
+                break;
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.status, fetch]);
