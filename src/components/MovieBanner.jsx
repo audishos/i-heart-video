@@ -11,6 +11,7 @@ const MovieBanner = ({ id, title, isFavorite, onToggleFavorite }) => {
             <button
                 className="movie-banner__favorite-button"
                 onClick={() => onToggleFavorite(id, isFavorite)}
+                data-testid="movie-banner__favorite-button"
             >
                 {isFavorite ? (
                     <Favorite color="action" fontSize="large" />
