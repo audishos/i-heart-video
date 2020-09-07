@@ -1,0 +1,14 @@
+.request-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.request-error__text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkred;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
